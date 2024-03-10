@@ -1,2 +1,2 @@
 # mobileAutomationRobotFramework
-Mobile automation by Robot Fraemwork
+Mobile automation by Robot Framework
