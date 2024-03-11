@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.8 on win32)" generated="2024-03-11T13:59:33.797862" rpa="false" schemaversion="5">
+<suite id="s1" name="OpenApplication" source="C:\Users\abu.arefin\Desktop\git\mobileAutomationRobotFramework\Android_Project\AndroidProject\Tests\OpenApplication.robot">
+<test id="s1-t1" name="OpenApplication" line="5">
+<kw name="Open Application" owner="AppiumLibrary">
+<msg time="2024-03-11T13:59:34.113566" level="TRACE">Arguments: [ 'http://localhost:9000/wd/hub' | platformName='Android' | deviceName='aba5288e' | appPackage='jp.naver.line.android' | appActivity='jp.naver.line.android.activity.SplashActivity' | automationName='Uiautomator2' ]</msg>
+<msg time="2024-03-11T13:59:34.113566" level="DEBUG">POST http://localhost:9000/wd/hub/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'platformName': 'Android', 'appium:deviceName': 'aba5288e', 'appium:appPackage': 'jp.naver.line.android', 'appium:appActivity': 'jp.naver.line.android.activity.SplashActivity', 'appium:automationName': 'Uiautomator2'}}}</msg>
+<msg time="2024-03-11T13:59:34.138786" level="DEBUG">Starting new HTTP connection (1): localhost:9000</msg>
+<msg time="2024-03-11T13:59:37.114780" level="DEBUG">http://localhost:9000 "POST /wd/hub/session HTTP/1.1" 500 0</msg>
+<msg time="2024-03-11T13:59:37.114780" level="DEBUG">Remote response: status=500 | data={"value":{"error":"unknown error","message":"An unknown server-side error occurred while processing the command. Original error: Check https://github.com/appium/appium/issues/13802 for throubleshooting. Error executing adbExec. Original error: 'Command 'C:\\\\Users\\\\abu.arefin\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe -P 5037 -s aba5288e shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 255'; Command output: Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS\r\n\r\njava.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS\r\n\tat com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)\r\n\tat com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)\r\n\tat com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)\r\n\tat com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)\r\n\tat android.content.ContentProvider.call(ContentProvider.java:2178)\r\n\tat android.content.ContentProvider$Transport.call(ContentProvider.java:477)\r\n\tat com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)\r\n\tat com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)\r\n\tat android.os.ShellCommand.exec(ShellCommand.java:111)\r\n\tat com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)\r\n\tat android.os.Binder.shellCommand(Binder.java:881)\r\n\tat android.os.Binder.onTransact(Binder.java:765)\r\n\tat android.os.Binder.execTransactInternal(Binder.java:1021)\r\n\tat android.os.Binder.execTransact(Binder.java:994)\r\nSecurity exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS\r\n\r\njava.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS\r\n\tat com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)\r\n\tat com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)\r\n\tat com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)\r\n\tat com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)\r\n\tat android.content.ContentProvider.call(ContentProvider.java:2178)\r\n\tat android.content.ContentProvider$Transport.call(ContentProvider.java:477)\r\n\tat com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)\r\n\tat com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)\r\n\tat android.os.ShellCommand.exec(ShellCommand.java:111)\r\n\tat com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)\r\n\tat android.os.Binder.shellCommand(Binder.java:881)\r\n\tat android.os.Binder.onTransact(Binder.java:765)\r\n\tat android.os.Binder.execTransactInternal(Binder.java:1021)\r\n\tat android.os.Binder.execTransact(Binder.java:994)\r\nSecurity exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS\r\n\r\njava.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS\r\n\tat com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)\r\n\tat com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)\r\n\tat com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)\r\n\tat com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)\r\n\tat android.content.ContentProvider.call(ContentProvider.java:2178)\r\n\tat android.content.ContentProvider$Transport.call(ContentProvider.java:477)\r\n\tat com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)\r\n\tat com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)\r\n\tat android.os.ShellCommand.exec(ShellCommand.java:111)\r\n\tat com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)\r\n\tat android.os.Binder.shellCommand(Binder.java:881)\r\n\tat android.os.Binder.onTransact(Binder.java:765)\r\n\tat android.os.Binder.execTransactInternal(Binder.java:1021)\r\n\tat android.os.Binder.execTransact(Binder.java:994)\r\n","stacktrace":"UnknownError: An unknown server-side error occurred while processing the command. Original error: Check https://github.com/appium/appium/issues/13802 for throubleshooting. Error executing adbExec. Original error: 'Command 'C:\\\\Users\\\\abu.arefin\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe -P 5037 -s aba5288e shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 255'; Command output: Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS\r\n\r\njava.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS\r\n\tat com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)\r\n\tat com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)\r\n\tat com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)\r\n\tat com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)\r\n\tat android.content.ContentProvider.call(ContentProvider.java:2178)\r\n\tat android.content.ContentProvider$Transport.call(ContentProvider.java:477)\r\n\tat com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)\r\n\tat com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)\r\n\tat android.os.ShellCommand.exec(ShellCommand.java:111)\r\n\tat com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)\r\n\tat android.os.Binder.shellCommand(Binder.java:881)\r\n\tat android.os.Binder.onTransact(Binder.java:765)\r\n\tat android.os.Binder.execTransactInternal(Binder.java:1021)\r\n\tat android.os.Binder.execTransact(Binder.java:994)\r\nSecurity exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS\r\n\r\njava.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS\r\n\tat com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)\r\n\tat com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)\r\n\tat com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)\r\n\tat com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)\r\n\tat android.content.ContentProvider.call(ContentProvider.java:2178)\r\n\tat android.content.ContentProvider$Transport.call(ContentProvider.java:477)\r\n\tat com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)\r\n\tat com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)\r\n\tat android.os.ShellCommand.exec(ShellCommand.java:111)\r\n\tat com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)\r\n\tat android.os.Binder.shellCommand(Binder.java:881)\r\n\tat android.os.Binder.onTransact(Binder.java:765)\r\n\tat android.os.Binder.execTransactInternal(Binder.java:1021)\r\n\tat android.os.Binder.execTransact(Binder.java:994)\r\nSecurity exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS\r\n\r\njava.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS\r\n\tat com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)\r\n\tat com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)\r\n\tat com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)\r\n\tat com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)\r\n\tat android.content.ContentProvider.call(ContentProvider.java:2178)\r\n\tat android.content.ContentProvider$Transport.call(ContentProvider.java:477)\r\n\tat com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)\r\n\tat com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)\r\n\tat android.os.ShellCommand.exec(ShellCommand.java:111)\r\n\tat com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)\r\n\tat android.os.Binder.shellCommand(Binder.java:881)\r\n\tat android.os.Binder.onTransact(Binder.java:765)\r\n\tat android.os.Binder.execTransactInternal(Binder.java:1021)\r\n\tat android.os.Binder.execTransact(Binder.java:994)\r\n\n    at getResponseForW3CError (C:\\Users\\abu.arefin\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\@appium\\base-driver\\lib\\protocol\\errors.js:1118:9)\n    at asyncHandler (C:\\Users\\abu.arefin\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\@appium\\base-driver\\lib\\protocol\\protocol.js:491:57)"}} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '9800', 'ETag': 'W/"2648-ErBO8+rCV0HeLP/1jFzoNJmpCNs"', 'Date': 'Mon, 11 Mar 2024 07:59:37 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2024-03-11T13:59:37.114780" level="DEBUG">Finished Request</msg>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-03-11T13:59:37.115702" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-03-11T13:59:37.116682" level="FAIL">No application is open</msg>
+<msg time="2024-03-11T13:59:37.119620" level="DEBUG">Traceback (most recent call last):
+  File "C:\python\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 60, in open_application
+    application = webdriver.Remote(str(remote_url), options=desired_caps, strict_ssl=strict_ssl)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+  File "C:\python\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 208, in __init__
+    self.start_session(capabilities)
+  File "C:\python\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "C:\python\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Check https://github.com/appium/appium/issues/13802 for throubleshooting. Error executing adbExec. Original error: 'Command 'C:\\Users\\abu.arefin\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s aba5288e shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 255'; Command output: Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Check https://github.com/appium/appium/issues/13802 for throubleshooting. Error executing adbExec. Original error: 'Command 'C:\\Users\\abu.arefin\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s aba5288e shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 255'; Command output: Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+    at getResponseForW3CError (C:\Users\abu.arefin\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1118:9)
+    at asyncHandler (C:\Users\abu.arefin\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:491:57)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\python\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\Lib\site-packages\AppiumLibrary\keywords\_screenshot.py", line 34, in capture_page_screenshot
+    base64_screenshot = self._current_application().get_screenshot_as_base64()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2024-03-11T13:59:37.115702" elapsed="0.004894">No application is open</status>
+</kw>
+<msg time="2024-03-11T13:59:37.121573" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2024-03-11T13:59:37.122551" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Check https://github.com/appium/appium/issues/13802 for throubleshooting. Error executing adbExec. Original error: 'Command 'C:\\Users\\abu.arefin\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s aba5288e shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 255'; Command output: Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Check https://github.com/appium/appium/issues/13802 for throubleshooting. Error executing adbExec. Original error: 'Command 'C:\\Users\\abu.arefin\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s aba5288e shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 255'; Command output: Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+    at getResponseForW3CError (C:\Users\abu.arefin\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1118:9)
+    at asyncHandler (C:\Users\abu.arefin\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:491:57)</msg>
+<msg time="2024-03-11T13:59:37.123528" level="DEBUG">Traceback (most recent call last):
+  File "C:\python\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\python\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 60, in open_application
+    application = webdriver.Remote(str(remote_url), options=desired_caps, strict_ssl=strict_ssl)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+  File "C:\python\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 208, in __init__
+    self.start_session(capabilities)
+  File "C:\python\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "C:\python\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Check https://github.com/appium/appium/issues/13802 for throubleshooting. Error executing adbExec. Original error: 'Command 'C:\\Users\\abu.arefin\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s aba5288e shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 255'; Command output: Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Check https://github.com/appium/appium/issues/13802 for throubleshooting. Error executing adbExec. Original error: 'Command 'C:\\Users\\abu.arefin\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s aba5288e shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 255'; Command output: Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+    at getResponseForW3CError (C:\Users\abu.arefin\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1118:9)
+    at asyncHandler (C:\Users\abu.arefin\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:491:57)</msg>
+<arg>http://localhost:9000/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=aba5288e</arg>
+<arg>appPackage=jp.naver.line.android</arg>
+<arg>appActivity=jp.naver.line.android.activity.SplashActivity</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="FAIL" start="2024-03-11T13:59:34.112016" elapsed="3.011512">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Check https://github.com/appium/appium/issues/13802 for throubleshooting. Error executing adbExec. Original error: 'Command 'C:\\Users\\abu.arefin\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s aba5288e shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 255'; Command output: Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+    [ Message content over the limit has been removed. ]
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+    at getResponseForW3CError (C:\Users\abu.arefin\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1118:9)
+    at asyncHandler (C:\Users\abu.arefin\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:491:57)</status>
+</kw>
+<status status="FAIL" start="2024-03-11T13:59:34.112016" elapsed="3.013030">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Check https://github.com/appium/appium/issues/13802 for throubleshooting. Error executing adbExec. Original error: 'Command 'C:\\Users\\abu.arefin\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s aba5288e shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 255'; Command output: Security exception: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+
+java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS
+	at com.android.providers.settings.SettingsProvider.enforceWritePermission(SettingsProvider.java:2050)
+	at com.android.providers.settings.SettingsProvider.mutateGlobalSetting(SettingsProvider.java:1256)
+	at com.android.providers.settings.SettingsProvider.deleteGlobalSetting(SettingsProvider.java:1239)
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+    [ Message content over the limit has been removed. ]
+	at com.android.providers.settings.SettingsProvider.call(SettingsProvider.java:476)
+	at android.content.ContentProvider.call(ContentProvider.java:2178)
+	at android.content.ContentProvider$Transport.call(ContentProvider.java:477)
+	at com.android.providers.settings.SettingsService$MyShellCommand.deleteForUser(SettingsService.java:399)
+	at com.android.providers.settings.SettingsService$MyShellCommand.onCommand(SettingsService.java:281)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.providers.settings.SettingsService.onShellCommand(SettingsService.java:49)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+    at getResponseForW3CError (C:\Users\abu.arefin\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1118:9)
+    at asyncHandler (C:\Users\abu.arefin\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:491:57)</status>
+</test>
+<status status="FAIL" start="2024-03-11T13:59:33.800349" elapsed="3.327643"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="OpenApplication">OpenApplication</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-03-11T13:59:37.121573" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
