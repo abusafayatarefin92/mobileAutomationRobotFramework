@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.8 on win32)" generated="2024-03-10T10:41:46.432104" rpa="false" schemaversion="5">
+<suite id="s1" name="DropDownAndListBoxes" source="C:\Users\abu.arefin\PycharmProjects\Automation\TestCases\DropDownAndListBoxes.robot">
+<test id="s1-t1" name="LoginTest" line="11">
+<kw name="DropDownAndListBoxesPMTApplication">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-10T10:41:46.660342" level="INFO">Opening browser 'chrome' to base url 'https://pmttest.scibd.info/'.</msg>
+<arg>${pmturl}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-10T10:41:46.659188" elapsed="4.542322"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-10T10:41:51.201510" elapsed="0.118713"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-10T10:41:51.321642" level="INFO">Clicking element 'xpath://*[@id="LoginDiv"]/div/div/a'.</msg>
+<arg>xpath://*[@id="LoginDiv"]/div/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-10T10:41:51.320376" elapsed="0.639488"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-10T10:41:51.959864" level="INFO">Typing text 'centeruser@gmail.com' into text field 'id:Email'.</msg>
+<arg>id:Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-10T10:41:51.959864" elapsed="0.165348"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-10T10:41:52.126212" level="INFO">Typing text '12345' into text field 'id:Password'.</msg>
+<arg>id:Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-10T10:41:52.126212" elapsed="0.104094"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-10T10:41:52.230306" level="INFO">Clicking element 'xpath:/html/body/div/div[2]/div/form/div[3]/button'.</msg>
+<arg>xpath:/html/body/div/div[2]/div/form/div[3]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-10T10:41:52.230306" elapsed="1.302011"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-10T10:41:56.534209" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-10T10:41:53.533830" elapsed="3.000379"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-03-10T10:41:56.534209" level="INFO">Selecting options from selection list 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' by label Asia.</msg>
+<msg time="2024-03-10T10:41:56.698131" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-10T10:41:56.698131" level="FAIL">List with locator 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' not found.</msg>
+<arg>select2-RegionId8c6pf5poucyc41kzt0yrmb-container</arg>
+<arg>Asia</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="FAIL" start="2024-03-10T10:41:56.534209" elapsed="0.163922">List with locator 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' not found.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<arg>select2-CountryIdebc08vkyvp8xp7z32dxo-container</arg>
+<arg>India Member Implementing Office</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://*[@id="strategic"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://*[@id="strategic"]/ul/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="kt_body"]/div/div/div[1]/div[1]/h1</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://*[@id="bntAddNew"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://*[@id="btnAdd"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://*[@id="ObjectiveMilestone"]/div[2]/div[1]/div/span[1]/span[1]/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<arg>GlobalObjectiveId</arg>
+<arg>USE DIGITAL &amp; DATA</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<arg>GlobalObjectiveId</arg>
+<arg>STRATEGIC PARTNERSHIPS</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-03-10T10:41:46.658085" elapsed="10.040046">List with locator 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' not found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-03-10T10:41:56.698131" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-03-10T10:41:46.656983" elapsed="10.041148">List with locator 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' not found.</status>
+</test>
+<status status="FAIL" start="2024-03-10T10:41:46.434252" elapsed="10.263879"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="DropDownAndListBoxes">DropDownAndListBoxes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
