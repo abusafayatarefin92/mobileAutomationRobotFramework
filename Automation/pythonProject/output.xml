@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.9.0 on win32)" generated="2024-06-12T14:34:48.906158" rpa="false" schemaversion="5">
+<suite id="s1" name="DropDownAndListBoxes" source="C:\Users\abu.arefin\Desktop\git\mobileAutomationRobotFramework\Automation\pythonProject\TestCases\DropDownAndListBoxes.robot">
+<test id="s1-t1" name="LoginTest" line="11">
+<kw name="DropDownAndListBoxesPMTApplication">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-12T14:34:49.273855" level="INFO">Opening browser 'chrome' to base url 'https://pmttest.scibd.info/'.</msg>
+<arg>${pmturl}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-12T14:34:49.273855" elapsed="14.209203"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-12T14:35:03.483058" elapsed="0.036921"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-12T14:35:03.520979" level="INFO">Clicking element 'xpath://*[@id="LoginDiv"]/div/div/a'.</msg>
+<arg>xpath://*[@id="LoginDiv"]/div/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-12T14:35:03.520979" elapsed="2.497007"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-12T14:35:06.018496" level="INFO">Typing text 'centeruser@gmail.com' into text field 'id:Email'.</msg>
+<arg>id:Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-12T14:35:06.017986" elapsed="0.183003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-12T14:35:06.200989" level="INFO">Typing text '12345' into text field 'id:Password'.</msg>
+<arg>id:Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-12T14:35:06.200989" elapsed="0.111480"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-12T14:35:06.312469" level="INFO">Clicking element 'xpath:/html/body/div/div[2]/div/form/div[3]/button'.</msg>
+<arg>xpath:/html/body/div/div[2]/div/form/div[3]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-12T14:35:06.312469" elapsed="9.859619"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-12T14:35:19.174624" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-12T14:35:16.173110" elapsed="3.001514"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-12T14:35:19.174624" level="INFO">Clicking element 'xpath://*[@id="kt_body"]/div/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/span/span[1]/span'.</msg>
+<arg>xpath://*[@id="kt_body"]/div/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/span/span[1]/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-12T14:35:19.174624" elapsed="0.078936"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-06-12T14:35:19.254561" level="INFO">Selecting options from selection list 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' by label Asia.</msg>
+<msg time="2024-06-12T14:35:19.474259" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-12T14:35:19.475261" level="FAIL">List with locator 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' not found.</msg>
+<arg>select2-RegionId8c6pf5poucyc41kzt0yrmb-container</arg>
+<arg>Asia</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="FAIL" start="2024-06-12T14:35:19.253560" elapsed="0.228247">List with locator 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' not found.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-06-12T14:35:19.481807" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-06-12T14:34:49.272250" elapsed="30.210558">List with locator 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' not found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-06-12T14:35:19.482808" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-06-12T14:34:49.271292" elapsed="30.212515">List with locator 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' not found.</status>
+</test>
+<status status="FAIL" start="2024-06-12T14:34:48.907670" elapsed="30.577138"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="DropDownAndListBoxes">DropDownAndListBoxes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

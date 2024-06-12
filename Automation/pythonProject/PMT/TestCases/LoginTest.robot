@@ -15,6 +15,10 @@ LoginTest
     Enter Username      ${username}
     Enter Password      ${password}
     Click Signin
-    sleep 3 seconds
+    Sleep   3 seconds
     Veryfy Successfull Login
-    Close my browsers
+    Select Region
+    Sleep   5 seconds
+#    Select Country
+#    Sleep   5 seconds
+#    #Close my browsers

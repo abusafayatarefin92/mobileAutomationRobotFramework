@@ -1,6 +1,8 @@
 *** Settings ***
 Library     SeleniumLibrary
 Variables   ../PageObjects/Locators.py
+Library  SeleniumLibrary
+Variables   ../PageObjects/Locators.py
 
 *** Keywords ***
 Open my Browser
@@ -9,7 +11,7 @@ Open my Browser
     maximize browser window
 
 Click Login Screen
-    click button    ${btn_LoginScreen}
+    click element    ${btn_LoginScreen}
 
 Enter Username
     [Arguments]  ${username}
@@ -20,10 +22,16 @@ Enter Password
     input text      ${txt_loginPassword}    ${password}
 
 Click Signin
-    click button    ${btn_Login}
+    click element    ${btn_Login}
 
 Veryfy Successfull Login
-    title should be Home|PMT
+    title should be     Home|PMT
+
+Select Region
+    select from list by label       ${region_selector}     ${region}
+
+Select Country
+    select from list by label   ${country_selector}     ${country}
 
 Close my browsers
     close all browsers
