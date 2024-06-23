@@ -1,80 +1,218 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.9.0 on win32)" generated="2024-06-12T14:34:48.906158" rpa="false" schemaversion="5">
-<suite id="s1" name="DropDownAndListBoxes" source="C:\Users\abu.arefin\Desktop\git\mobileAutomationRobotFramework\Automation\pythonProject\TestCases\DropDownAndListBoxes.robot">
-<test id="s1-t1" name="LoginTest" line="11">
-<kw name="DropDownAndListBoxesPMTApplication">
+<robot generator="Robot 7.0.1 (Python 3.9.0 on win32)" generated="2024-06-23T10:33:46.403306" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTest" source="C:\Users\abu.arefin\Desktop\git\mobileAutomationRobotFramework\Automation\pythonProject\PMT\TestCases\LoginTest.robot">
+<test id="s1-t1" name="LoginTest" line="12">
+<kw name="Open my Browser" owner="Keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-12T14:34:49.273855" level="INFO">Opening browser 'chrome' to base url 'https://pmttest.scibd.info/'.</msg>
+<msg time="2024-06-23T10:33:46.591692" level="INFO">Opening browser 'chrome' to base url 'https://testpmt.azurewebsites.net/'.</msg>
 <arg>${pmturl}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-12T14:34:49.273855" elapsed="14.209203"/>
+<status status="PASS" start="2024-06-23T10:33:46.591692" elapsed="31.771902"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-12T14:35:03.483058" elapsed="0.036921"/>
+<status status="PASS" start="2024-06-23T10:34:18.363594" elapsed="0.033923"/>
 </kw>
+<arg>${pmturl}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-06-23T10:33:46.591692" elapsed="31.805825"/>
+</kw>
+<kw name="Click Login Screen" owner="Keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-12T14:35:03.520979" level="INFO">Clicking element 'xpath://*[@id="LoginDiv"]/div/div/a'.</msg>
-<arg>xpath://*[@id="LoginDiv"]/div/div/a</arg>
+<msg time="2024-06-23T10:34:18.397517" level="INFO">Clicking element '//*[@id="LoginDiv"]/div/div/a/span'.</msg>
+<arg>${btn_LoginScreen}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-12T14:35:03.520979" elapsed="2.497007"/>
+<status status="PASS" start="2024-06-23T10:34:18.397517" elapsed="4.141066"/>
 </kw>
+<status status="PASS" start="2024-06-23T10:34:18.397517" elapsed="4.141066"/>
+</kw>
+<kw name="Enter Username" owner="Keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-12T14:35:06.018496" level="INFO">Typing text 'centeruser@gmail.com' into text field 'id:Email'.</msg>
-<arg>id:Email</arg>
+<msg time="2024-06-23T10:34:22.540337" level="INFO">Typing text 'centeruser@gmail.com' into text field 'id:Email'.</msg>
+<arg>${txt_loginUsername}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-12T14:35:06.017986" elapsed="0.183003"/>
+<status status="PASS" start="2024-06-23T10:34:22.539326" elapsed="0.175130"/>
 </kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-06-23T10:34:22.539326" elapsed="0.175130"/>
+</kw>
+<kw name="Enter Password" owner="Keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-06-12T14:35:06.200989" level="INFO">Typing text '12345' into text field 'id:Password'.</msg>
-<arg>id:Password</arg>
+<msg time="2024-06-23T10:34:22.714456" level="INFO">Typing text '12345' into text field 'id:Password'.</msg>
+<arg>${txt_loginPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-12T14:35:06.200989" elapsed="0.111480"/>
+<status status="PASS" start="2024-06-23T10:34:22.714456" elapsed="0.107801"/>
 </kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-06-23T10:34:22.714456" elapsed="0.108074"/>
+</kw>
+<kw name="Click Signin" owner="Keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-12T14:35:06.312469" level="INFO">Clicking element 'xpath:/html/body/div/div[2]/div/form/div[3]/button'.</msg>
-<arg>xpath:/html/body/div/div[2]/div/form/div[3]/button</arg>
+<msg time="2024-06-23T10:34:22.822530" level="INFO">Clicking element 'xpath:/html/body/div/div[2]/div/form/div[3]'.</msg>
+<arg>${btn_Login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-12T14:35:06.312469" elapsed="9.859619"/>
+<status status="PASS" start="2024-06-23T10:34:22.822530" elapsed="33.604248"/>
+</kw>
+<status status="PASS" start="2024-06-23T10:34:22.822530" elapsed="33.604248"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-12T14:35:19.174624" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
+<msg time="2024-06-23T10:34:59.435901" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-12T14:35:16.173110" elapsed="3.001514"/>
+<status status="PASS" start="2024-06-23T10:34:56.427698" elapsed="3.008203"/>
 </kw>
+<kw name="Select QSSA" owner="Keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-06-12T14:35:19.174624" level="INFO">Clicking element 'xpath://*[@id="kt_body"]/div/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/span/span[1]/span'.</msg>
-<arg>xpath://*[@id="kt_body"]/div/div/div/div[2]/div/div[1]/div/div[2]/div/div[1]/div/span/span[1]/span</arg>
+<msg time="2024-06-23T10:34:59.437643" level="INFO">Clicking element 'xpath://*[@id="kt_wrapper"]/div[2]/div[2]/div[2]/ul/li[12]/div'.</msg>
+<msg time="2024-06-23T10:35:00.640110" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-23T10:35:00.640110" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (-1, 473)
+  (Session info: chrome=126.0.6478.63)
+Stacktrace:
+	GetHandleVerifier [0x00007FF71CD73E62+31618]
+	(No symbol) [0x00007FF71CCEB0C9]
+	(No symbol) [0x00007FF71CBA888A]
+	(No symbol) [0x00007FF71CC0022E]
+	(No symbol) [0x00007FF71CBFDBE2]
+	(No symbol) [0x00007FF71CBFB07B]
+	(No symbol) [0x00007FF71CBFA246]
+	(No symbol) [0x00007FF71CBEC281]
+	(No symbol) [0x00007FF71CC1D10A]
+	(No symbol) [0x00007FF71CBEBBA6]
+	(No symbol) [0x00007FF71CC1D320]
+	(No symbol) [0x00007FF71CC3CA80]
+	(No symbol) [0x00007FF71CC1CEB3]
+	(No symbol) [0x00007FF71CBEA46B]
+	(No symbol) [0x00007FF71CBEB001]
+	GetHandleVerifier [0x00007FF71D07A03D+3202397]
+	GetHandleVerifier [0x00007FF71D0C6A5D+3516285]
+	GetHandleVerifier [0x00007FF71D0BC4D0+3473904]
+	GetHandleVerifier [0x00007FF71CE25D66+760454]
+	(No symbol) [0x00007FF71CCF6B6F]
+	(No symbol) [0x00007FF71CCF1D04]
+	(No symbol) [0x00007FF71CCF1E92]
+	(No symbol) [0x00007FF71CCE123F]
+	BaseThreadInitThunk [0x00007FF8E9C2257D+29]
+	RtlUserThreadStart [0x00007FF8EB10AF28+40]
+</msg>
+<arg>${QSSA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-12T14:35:19.174624" elapsed="0.078936"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-06-12T14:35:19.254561" level="INFO">Selecting options from selection list 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' by label Asia.</msg>
-<msg time="2024-06-12T14:35:19.474259" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-06-12T14:35:19.475261" level="FAIL">List with locator 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' not found.</msg>
-<arg>select2-RegionId8c6pf5poucyc41kzt0yrmb-container</arg>
-<arg>Asia</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="FAIL" start="2024-06-12T14:35:19.253560" elapsed="0.228247">List with locator 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' not found.</status>
+<status status="FAIL" start="2024-06-23T10:34:59.437643" elapsed="1.204467">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (-1, 473)
+  (Session info: chrome=126.0.6478.63)
+Stacktrace:
+	GetHandleVerifier [0x00007FF71CD73E62+31618]
+	(No symbol) [0x00007FF71CCEB0C9]
+	(No symbol) [0x00007FF71CBA888A]
+	(No symbol) [0x00007FF71CC0022E]
+	(No symbol) [0x00007FF71CBFDBE2]
+	(No symbol) [0x00007FF71CBFB07B]
+	(No symbol) [0x00007FF71CBFA246]
+	(No symbol) [0x00007FF71CBEC281]
+	(No symbol) [0x00007FF71CC1D10A]
+	(No symbol) [0x00007FF71CBEBBA6]
+	(No symbol) [0x00007FF71CC1D320]
+	(No symbol) [0x00007FF71CC3CA80]
+	(No symbol) [0x00007FF71CC1CEB3]
+	(No symbol) [0x00007FF71CBEA46B]
+	(No symbol) [0x00007FF71CBEB001]
+	GetHandleVerifier [0x00007FF71D07A03D+3202397]
+	GetHandleVerifier [0x00007FF71D0C6A5D+3516285]
+	GetHandleVerifier [0x00007FF71D0BC4D0+3473904]
+	GetHandleVerifier [0x00007FF71CE25D66+760454]
+	(No symbol) [0x00007FF71CCF6B6F]
+	(No symbol) [0x00007FF71CCF1D04]
+	(No symbol) [0x00007FF71CCF1E92]
+	(No symbol) [0x00007FF71CCE123F]
+	BaseThreadInitThunk [0x00007FF8E9C2257D+29]
+	RtlUserThreadStart [0x00007FF8EB10AF28+40]
+</status>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<arg>2</arg>
+<arg>3 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-06-12T14:35:19.481807" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-06-23T10:35:00.642110" elapsed="0.000000"/>
 </kw>
-<status status="FAIL" start="2024-06-12T14:34:49.272250" elapsed="30.210558">List with locator 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' not found.</status>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${QSSA_HOME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-23T10:35:00.642110" elapsed="0.001000"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2024-06-12T14:35:19.482808" elapsed="0.000000"/>
+<status status="FAIL" start="2024-06-23T10:34:59.437052" elapsed="1.206058">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (-1, 473)
+  (Session info: chrome=126.0.6478.63)
+Stacktrace:
+	GetHandleVerifier [0x00007FF71CD73E62+31618]
+	(No symbol) [0x00007FF71CCEB0C9]
+	(No symbol) [0x00007FF71CBA888A]
+	(No symbol) [0x00007FF71CC0022E]
+	(No symbol) [0x00007FF71CBFDBE2]
+	(No symbol) [0x00007FF71CBFB07B]
+	(No symbol) [0x00007FF71CBFA246]
+	(No symbol) [0x00007FF71CBEC281]
+	(No symbol) [0x00007FF71CC1D10A]
+	(No symbol) [0x00007FF71CBEBBA6]
+	(No symbol) [0x00007FF71CC1D320]
+	(No symbol) [0x00007FF71CC3CA80]
+	(No symbol) [0x00007FF71CC1CEB3]
+	(No symbol) [0x00007FF71CBEA46B]
+	(No symbol) [0x00007FF71CBEB001]
+	GetHandleVerifier [0x00007FF71D07A03D+3202397]
+	GetHandleVerifier [0x00007FF71D0C6A5D+3516285]
+	GetHandleVerifier [0x00007FF71D0BC4D0+3473904]
+	GetHandleVerifier [0x00007FF71CE25D66+760454]
+	(No symbol) [0x00007FF71CCF6B6F]
+	(No symbol) [0x00007FF71CCF1D04]
+	(No symbol) [0x00007FF71CCF1E92]
+	(No symbol) [0x00007FF71CCE123F]
+	BaseThreadInitThunk [0x00007FF8E9C2257D+29]
+	RtlUserThreadStart [0x00007FF8EB10AF28+40]
+</status>
 </kw>
-<status status="FAIL" start="2024-06-12T14:34:49.271292" elapsed="30.212515">List with locator 'select2-RegionId8c6pf5poucyc41kzt0yrmb-container' not found.</status>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-06-23T10:35:00.643110" elapsed="0.000000"/>
+</kw>
+<kw name="Verify QSSA Home" owner="Keywords">
+<status status="NOT RUN" start="2024-06-23T10:35:00.644111" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-06-23T10:35:00.644886" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-06-23T10:33:46.591692" elapsed="74.054206">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (-1, 473)
+  (Session info: chrome=126.0.6478.63)
+Stacktrace:
+	GetHandleVerifier [0x00007FF71CD73E62+31618]
+	(No symbol) [0x00007FF71CCEB0C9]
+	(No symbol) [0x00007FF71CBA888A]
+	(No symbol) [0x00007FF71CC0022E]
+	(No symbol) [0x00007FF71CBFDBE2]
+	(No symbol) [0x00007FF71CBFB07B]
+	(No symbol) [0x00007FF71CBFA246]
+	(No symbol) [0x00007FF71CBEC281]
+	(No symbol) [0x00007FF71CC1D10A]
+	(No symbol) [0x00007FF71CBEBBA6]
+	(No symbol) [0x00007FF71CC1D320]
+	(No symbol) [0x00007FF71CC3CA80]
+	(No symbol) [0x00007FF71CC1CEB3]
+	(No symbol) [0x00007FF71CBEA46B]
+	(No symbol) [0x00007FF71CBEB001]
+	GetHandleVerifier [0x00007FF71D07A03D+3202397]
+	GetHandleVerifier [0x00007FF71D0C6A5D+3516285]
+	GetHandleVerifier [0x00007FF71D0BC4D0+3473904]
+	GetHandleVerifier [0x00007FF71CE25D66+760454]
+	(No symbol) [0x00007FF71CCF6B6F]
+	(No symbol) [0x00007FF71CCF1D04]
+	(No symbol) [0x00007FF71CCF1E92]
+	(No symbol) [0x00007FF71CCE123F]
+	BaseThreadInitThunk [0x00007FF8E9C2257D+29]
+	RtlUserThreadStart [0x00007FF8EB10AF28+40]
+</status>
 </test>
-<status status="FAIL" start="2024-06-12T14:34:48.907670" elapsed="30.577138"/>
+<status status="FAIL" start="2024-06-23T10:33:46.403306" elapsed="74.244595"/>
 </suite>
 <statistics>
 <total>
@@ -83,7 +221,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="DropDownAndListBoxes">DropDownAndListBoxes</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="LoginTest">LoginTest</stat>
 </suite>
 </statistics>
 <errors>

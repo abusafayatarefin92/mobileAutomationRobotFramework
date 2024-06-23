@@ -16,8 +16,11 @@ LoginTest
     Enter Password      ${password}
     Click Signin
     Sleep   3 seconds
-    Veryfy Successfull Login
-    Select Region
+#    Verify Successfull Login
+#    Select Region
+    Select QSSA
+    Sleep   5 seconds
+    Verify QSSA Home
     Sleep   5 seconds
 #    Select Country
 #    Sleep   5 seconds

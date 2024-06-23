@@ -24,14 +24,22 @@ Enter Password
 Click Signin
     click element    ${btn_Login}
 
-Veryfy Successfull Login
-    title should be     Home|PMT
+Verify Successfull Login
+    title should be     Home | PMT
 
-Select Region
-    select from list by label       ${region_selector}     ${region}
+#Select Region
+#    select options by label       ${region_selector}
+#
+#Select Country
+#    select from list by label   ${country_selector}     ${country}
 
-Select Country
-    select from list by label   ${country_selector}     ${country}
+Select QSSA
+    click element     ${QSSA}
+    sleep   3 seconds
+    click element   ${QSSA_HOME}
+
+Verify QSSA Home
+    title should be     QSSA Home | PMT
 
 Close my browsers
     close all browsers
