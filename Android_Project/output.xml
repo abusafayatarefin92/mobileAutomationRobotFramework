@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-19T12:22:28.410576" rpa="false" schemaversion="5">
+<suite id="s1" name="Android Project" source="C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project">
+<suite id="s1-s1" name="AndroidProject" source="C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\AndroidProject">
+<suite id="s1-s1-s1" name="Tests" source="C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\AndroidProject\Tests">
+<suite id="s1-s1-s1-s1" name="OpenApplication" source="C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\AndroidProject\Tests\OpenApplication.robot">
+<test id="s1-s1-s1-s1-t1" name="OpenApplication" line="6">
+<kw name="Open Application">
+<msg time="2024-09-19T12:22:28.591027" level="FAIL">No keyword with name 'Open Application' found.</msg>
+<arg>http://localhost:9000/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=27151FDH2005PB</arg>
+<arg>appPackage=com.sci.chat_app</arg>
+<arg>appActivity=com.sci.chat_app.MainActivity</arg>
+<arg>automationName=Uiautomator2</arg>
+<status status="FAIL" start="2024-09-19T12:22:28.591027" elapsed="0.000000">No keyword with name 'Open Application' found.</status>
+</kw>
+<status status="FAIL" start="2024-09-19T12:22:28.589017" elapsed="0.002010">No keyword with name 'Open Application' found.</status>
+</test>
+<status status="FAIL" start="2024-09-19T12:22:28.441839" elapsed="0.149188"/>
+</suite>
+<status status="FAIL" start="2024-09-19T12:22:28.441839" elapsed="0.149188"/>
+</suite>
+<status status="FAIL" start="2024-09-19T12:22:28.441839" elapsed="0.149188"/>
+</suite>
+<status status="FAIL" start="2024-09-19T12:22:28.410576" elapsed="0.180451"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Android Project">Android Project</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="AndroidProject">Android Project.AndroidProject</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Tests">Android Project.AndroidProject.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="OpenApplication">Android Project.AndroidProject.Tests.OpenApplication</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-19T12:22:28.570402" level="ERROR">Error in file 'C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\AndroidProject\Tests\OpenApplication.robot' on line 2: Importing library 'AppiumLibrary' failed: ModuleNotFoundError: No module named 'appium.webdriver.common.touch_action'
+Traceback (most recent call last):
+  File "C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\venv\Lib\site-packages\AppiumLibrary\__init__.py", line 4, in &lt;module&gt;
+    from AppiumLibrary.keywords import *
+  File "C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\venv\Lib\site-packages\AppiumLibrary\keywords\__init__.py", line 9, in &lt;module&gt;
+    from ._touch import _TouchKeywords
+  File "C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\venv\Lib\site-packages\AppiumLibrary\keywords\_touch.py", line 3, in &lt;module&gt;
+    from appium.webdriver.common.touch_action import TouchAction
+PYTHONPATH:
+  C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project
+  C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project
+  C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\venv\Scripts\python312.zip
+  C:\python\Lib
+  C:\python\DLLs
+  C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\Lib
+  C:\Python312
+  C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\venv
+  C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\venv\Lib\site-packages</msg>
+<msg time="2024-09-19T12:22:28.570402" level="ERROR">Error in file 'C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\AndroidProject\Tests\OpenApplication.robot' on line 3: Importing library 'AppiumLibrary' failed: ModuleNotFoundError: No module named 'appium.webdriver.common.touch_action'
+Traceback (most recent call last):
+  File "C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\venv\Lib\site-packages\AppiumLibrary\__init__.py", line 4, in &lt;module&gt;
+    from AppiumLibrary.keywords import *
+  File "C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\venv\Lib\site-packages\AppiumLibrary\keywords\__init__.py", line 9, in &lt;module&gt;
+    from ._touch import _TouchKeywords
+  File "C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\venv\Lib\site-packages\AppiumLibrary\keywords\_touch.py", line 3, in &lt;module&gt;
+    from appium.webdriver.common.touch_action import TouchAction
+PYTHONPATH:
+  C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project
+  C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project
+  C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\venv\Scripts\python312.zip
+  C:\python\Lib
+  C:\python\DLLs
+  C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\Lib
+  C:\Python312
+  C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\venv
+  C:\Users\SCIBD\Desktop\git\mobileAutomationRobotFramework\Android_Project\venv\Lib\site-packages</msg>
+</errors>
+</robot>

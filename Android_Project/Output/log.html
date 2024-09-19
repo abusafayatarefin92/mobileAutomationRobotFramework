@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 7.0 (Python 3.11.8 on win32)" name="Generator">
+<meta content="Robot Framework 7.1 (Python 3.12.6 on win32)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
 <style media="all">
 :root {
@@ -1252,58 +1252,48 @@ window.stats = (function () {
             });
     }
     function calculatePercents(total, passed, failed, skipped) {
-        if (total == 0) {
+        if (total == 0)
             return [0.0, 0.0, 0.0];
-        }
         var pass = 100.0 * passed / total;
         var skip = 100.0 * skipped / total;
         var fail = 100.0 * failed / total;
         if (pass > 0 && pass < 0.1)
-            pass = 0.1
+            pass = 0.1;
         if (fail > 0 && fail < 0.1)
-            fail = 0.1
+            fail = 0.1;
         if (skip > 0 && skip < 0.1)
-            skip = 0.1
+            skip = 0.1;
         if (pass > 99.95 && pass < 100)
-            pass = 99.9
+            pass = 99.9;
         if (fail > 99.95 && fail < 100)
-            fail = 99.9
+            fail = 99.9;
         if (skip > 99.95 && skip < 100)
-            skip = 99.9
-        return [Math.round(pass*10)/10, Math.round(skip*10)/10, Math.round(fail*10)/10];
+            skip = 99.9;
+        return [round1(pass), round1(skip), round1(fail)];
     }
     function calculateWidths(num1, num2, num3) {
         if (num1 + num2 + num3 === 0)
             return [0.0, 0.0, 0.0];
         // Make small percentages better visible
         if (num1 > 0 && num1 < 1)
-            num1 = 1
+            num1 = 1.0;
         if (num2 > 0 && num2 < 1)
-            num2 = 1
+            num2 = 1.0;
         if (num3 > 0 && num3 < 1)
-            num3 = 1
+            num3 = 1.0;
         // Handle situation where some are rounded up
         while (num1 + num2 + num3 > 100) {
-            if (num1 > num2 && num1 > num3)
-                num1 -= 0.1;
-            else if (num2 > num1 && num2 > num3)
-                num2 -= 0.1;
-            else if (num3 > num1 && num3 > num2)
-                num3 -= 0.1;
-            else if (num1 > num3 && num1 == num2) {
-                num1 -= 0.1;
-                num2 -= 0.1;
-            }
-            else if (num1 > num2 && num1 == num3) {
-                num1 -= 0.1;
-                num3 -= 0.1;
-            }
-            else if (num2 > num1 && num2 == num3) {
-                num2 -= 0.1;
-                num3 -= 0.1;
-            }
+            if (num1 >= num2 && num1 >= num3)
+                num1 = round1(num1 - 0.1);
+            else if (num2 >= num1 && num2 >= num3)
+                num2 = round1(num2 - 0.1);
+            else
+                num3 = round1(num3 - 0.1);
         }
-        return [Math.ceil(num1*10)/10, Math.ceil(num2*10)/10, Math.ceil(num3*10)/10];
+        return [num1, num2, num3];
+    }
+    function round1(num) {
+        return Math.round(num*10) / 10;
     }
     return {
         Statistics: Statistics
@@ -2081,31 +2071,31 @@ storage = function () {
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,0,[],[1,0,22147],[],[[1,0,0,[],[1,270,21876],[[0,4,5,0,6,7,0,0,[1,270,21875],[[270,0,8],[270,1,9],[283,1,10],[22143,1,11],[22143,1,12],[22144,1,13],[22145,1,14],[22145,0,15]]]]]],[],[1,1,0,0]];
+window.output["suite"] = [1,2,3,0,[],[0,0,142],[],[[1,0,0,[],[0,142,0,4],[[0,5,0,0,0,6,0,0,[0,142,0],[[142,5,4]]]]]],[],[1,0,1,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*OpenApplication","*C:\\Users\\abu.arefin\\Desktop\\git\\mobileAutomationRobotFramework\\Android_Project\\AndroidProject\\Tests\\OpenApplication.robot","*../AndroidProject/Tests/OpenApplication.robot","*Open Application","*AppiumLibrary","eNq1UsFOwzAMvfMV1s5bI66oqzTBFYbEidOUNG5rLXWiON3E35OwTV3hzCVOnv2eo2fXodkHZAENjGfQIThqdSLPkDz0dEKGXQg0jSAYTxgreNZBG3KUCAV8Vzhzeg07ttGTBc0WaP+xhneHWhDaAdsj1BqGiN12NaQU5EmpntIwmar1o7oI3YJx3qhRS8KorG9FIatzzF2538SJucRr6aX1RsdeqtGumv/TrpVuahWahzpp4xCMjxbjdvW4KlAsh21qkz0tFtbK5OqM3OBXzdUf8AWljfSboC5qV8mIo094mKKbqZ8o82MxI5jrljLakb4jsZ/v96klSVKkNh1E7nq/LZjOnwW+/FRWRjDPPTs+5vlLATQD8SnLZxhjoq7sF8LgJYGjI+bNE3TdRqhntOAZq8U31I/TzTcnNerS","eNp9jUEOgjAURK9COECL7CRAUlesiInR/bcttlr6m/LBeHuBYNwYZ/nmTaaExETdVakhCgXnDiU4gwMV+yzL+FNxM17T+l9bcqiTOcEBdRj7FnpdCa8iWrVwpScr9UobsWsuB5EvGEI4gnzATVf3wDxMOjJnvWbwnc6OkGQnS6/fEoOtZqf5fjAfex2PhD2QRb9+n+0GMOZvyXBVVg==","eNp9jj0PgjAURf9Kw8LWopsESOrEZEyMLsbhSYut0o+UB8bEHy8IxknXc+7NvTxcOiMttik5kjgDooKs80gh+pSxxlXQKNdiukqShN0FU905Kv7ZjEERkyfxDWDtgtmAkXnMrQhOi1EI2etKTrjki/Kw5suRg/dbqG5wGfjVUwu9DLTRVlL4locQr1D3Gh8/UhRmT3fDhVZ94u92h84Aamen+b2eiQvDhdMLx+VdXg==","eNqNj0FrwkAQhf9K8LKXshu9NagQT7m0FaxeSg/jZuNOu8kuu5OIhPz3bsWIIIKnx7z55vFm/bH5TOaQaK+qxUQTuUwIYyUYbQNlr2maimMpdLsXQYWAtpksn6HmApZJzyQ42KNBQhVYFo0KfaA3IKnj+NUP3y8JA3OEUxjNnjkDVFlfv0OtosHypvQWS/aPOodtnZWqQ6nGfZFPi90qn90AUdYgf+FwBn4cb6BTnhtsFIe7uCi5JOyQTg9xDheCb2K/oK8HNzEt2Roofj822+LFs37GhmH4A2GafwA=","*Starting new HTTP connection (1): localhost:9000","*<a href=\"http://localhost:9000\">http://localhost:9000\x3c/a> \"POST /wd/hub/session HTTP/1.1\" 200 0","eNrVU11z2jAQ/CsevdDOYGJjIMYdHiDQkgnkC0IzfTvsAysYyZVkQ5ry33sCQtp0+gP6ZOl2V7dene5xLQ06CnUuhcbI0QZMoTt1z3N+OgkY6LywErICWfTCYshhzjNuOGq7zzMwC6nW17AmnHVFoiRPWJUlWPIYj+Vh1x/Oet061SHPbyFewdLWn/KagBJVLeMCa3ASE6kbG15y8/wvVg2OhNqEPOj0xCd1YeQaDJfi2P6BH0tSWQuvngkZXV4/PFJpg/MJoeRqIGCeYcKiBWQaq8zACvUkVohCp9KwyKiCyk9Qgo4Vz81JcABsYHPQf50j0GykWl1IITC23t7pMhnvLRPB4Na8l29ACS6WNvOdDVdzZdH/8QJ2r94e+pf9P73lfIvZvVVS3auFTarZceyBGiJfphR/3auykuMml8rcU5I2gwwX9CXAyPzA2PDEpCxqebROj0rf8xqn3t2cj7DEjEWB9zYRM1SaXFNz3z9FOAZRLOhnC4XKjszg+mZ284bKxJ7CRihkKZ1pzz0PvNbnE34YnQn/YXMgP1vfqzfeoX2arX3SftAihxq1dXGZ2BCSoO1hELvtpOG7jaYfuGF9nrjtOGwugvNmq5kEbLejl5oiJGS/M5xOb4f7dZ/H5sNL5dG9lRukcXF7z5XIqQy2OT12Xak6lRmofenRtSp3jCaViXtDV614gpaxH0dh3OlzjpZJg5Hxw6SePWkpPjlxCkqj6RRm4Ya/SyiRpUmtqB14FhhMYWm3X89YAHX36fvdcPP9wpzH4/moh1dtX3jLu/Au/LZilt4Hs285lqLq+KEzBuXUKTzHa0VeI2qGzpfx9Njw+KYsfYWYu5Dxcu//yu66+x1hhq9RFqZD91DZffwFfcWlpw==","*Finished Request","*Opened application with session id 0d390e3c-9d41-4513-82bd-9c85f37565d3","*Return: 1"]);
+window.output["strings"] = window.output["strings"].concat(["*","*OpenApplication","*C:\\Users\\SCIBD\\Desktop\\git\\mobileAutomationRobotFramework\\Android_Project\\AndroidProject\\Tests\\OpenApplication.robot","*../AndroidProject/Tests/OpenApplication.robot","*No keyword with name 'Open Application' found.","*Open Application","*<a href=\"http://localhost:9000/wd/hub\">http://localhost:9000/wd/hub\x3c/a>    platformName=Android    deviceName=27151FDH2005PB    appPackage=com.sci.chat_app    appActivity=com.sci.chat_app.MainActivity    automationName=Uiautomator2","eNrFk8Fu2zAMhu95CqKHehs6A2t3mXvymhYtlqXB6h0GCDBkmUm1WKJAyemyp59sz8OCDUUPLnokIZL/95O6ZCYGbWGtG4TkIhNfPbIXdxc3H+dijn4byImNDsJQFZ/kbSAjgyb7hSoKVywNPhBvRW5rJl2XK6bvqMIYj2GBPnhx69DmzjVa9S1S7nokQBYabRFOM7gxjjhou4mZiiXvIYkFujWLIUxgLaOMOoPPVLcNLqMGam192XFksCQwfR5sFFZDIvvi9AGrmvUOOVVkTJwcqFX3pVSdjGRWsFRYSbWFV4Z8AEaFNoCSTQON9OF1NgO46hw6ms6hHdqdiFjC64BvXZwuN+jFAa4oS211KMvU7Y9OBpfen3T7Om7C+YB6vAnnUR7AmsnAQXm6xX2cXXvQva/w5qU4RiH/A/rwKFBa9rsaCcqiiz79bvfyOL24v2DOHoV5yjmOpD1o3qdmq2/F9e1ylRfX3SVODHunWLv4O/vfmOIPfL4Rbh/uyZ69O01/ajeMGVKd4wfxfLHwU+qYlOmP2NXIM7ll0+/gn5v+BfPLN/I=","eNrFk8Fu00AQhu95ilEPNaBiCcIF92SaVq0IaUTNAWkla72epEu8O6vZdUr69KxtjIhAFQejHme0M/N//8xeMhODtrDRDUJykYkvHtmLu4ubDwuxQL8L5MRWB2Goik/yNpCRQZP9TBWFK5YGH4h3Irc1k67LNdM3VGGMx7BAH7y4dWhz5xqt+hYpdz0SIAuNtgjzDG6MIw7abmOmYskHSGKBbs1yCBPYyCijzuAT1W2Dq6iBWltfdhwZrAhMnwcbhdWQyL44fcCqZr1HThUZEycHatV9KVUnI5kVLBVWUu3ghSEfgFGhDaBk00AjfXiZzQCuOodOpnNoj3YvIpbwOuBrF6fLLXpxhCvKUlsdyjJ1h5OzwaV3Z92+TptwPqCebsN5lAewYTJwVJ7u8BBn1x507yu8ei6OUcjfgN4/CZSW/a5GgrLooo8/2z0/Ti/uN5j5kzD/co4jaQ+a96nZ+mtxfbta58V1d4kTw94p1i7+zv43pvgd/98Idwj3ZOdv3qaP2g1jhlTn+FG8WC79lDomZfoldj3yTG7Z9Dv446Z/APk6N/M="]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:22","fail":0,"label":"All Tests","pass":1,"skip":0}],[],[{"elapsed":"00:00:22","fail":0,"id":"s1","label":"OpenApplication","name":"OpenApplication","pass":1,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:00:00","fail":1,"label":"All Tests","pass":0,"skip":0}],[],[{"elapsed":"00:00:00","fail":1,"id":"s1","label":"OpenApplication","name":"OpenApplication","pass":0,"skip":0}]];
 </script>
 <script type="text/javascript">
-window.output["errors"] = [];
+window.output["errors"] = [[134,4,7],[142,4,8]];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1710741875946;
+window.output["baseMillis"] = 1726726903531;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 22153;
+window.output["generated"] = 142;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
 </script>
 <script type="text/javascript">
-window.settings = {"defaultLevel":"TRACE","minLevel":"TRACE","reportURL":"report.html","rpa":false,"splitLogBase":"log","title":""};
+window.settings = {"defaultLevel":"TRACE","minLevel":"FAIL","reportURL":"report.html","rpa":false,"splitLogBase":"log","title":""};
 </script>
 <title></title>
 </head>
